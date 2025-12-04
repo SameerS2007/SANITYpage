@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    {
+      "source": "/studio/:path*",
+      "destination": "/studio/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/studio/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    }
+  ]
+}
+
+

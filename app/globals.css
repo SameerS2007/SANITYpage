@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    /* Catppuccin Mocha - Base colors (primary) */
+    --color-primary-50: #f5e0dc;   /* Rosewater */
+    --color-primary-100: #f2cdcd;  /* Flamingo */
+    --color-primary-200: #f5c2e7;   /* Pink */
+    --color-primary-300: #cba6f7;   /* Mauve */
+    --color-primary-400: #b4befe;   /* Lavender */
+    --color-primary-500: #89b4fa;   /* Blue */
+    --color-primary-600: #74c7ec;   /* Sapphire */
+    --color-primary-700: #89dceb;   /* Sky */
+    --color-primary-800: #94e2d5;   /* Teal */
+    --color-primary-900: #a6e3a1;   /* Green */
+    --color-primary-950: #11111b;   /* Crust */
+
+    /* Catppuccin Mocha - Accent colors (secondary) */
+    --color-secondary-50: #cdd6f4;  /* Text */
+    --color-secondary-100: #bac2de;  /* Subtext1 */
+    --color-secondary-200: #a6adc8;  /* Subtext0 */
+    --color-secondary-300: #9399b2;  /* Overlay2 */
+    --color-secondary-400: #7f849c;  /* Overlay1 */
+    --color-secondary-500: #6c7086;  /* Overlay0 */
+    --color-secondary-600: #585b70;  /* Surface2 */
+    --color-secondary-700: #45475a;  /* Surface1 */
+    --color-secondary-800: #313244;  /* Surface0 */
+    --color-secondary-900: #181825;  /* Mantle */
+    --color-secondary-950: #1e1e2e;  /* Base */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
